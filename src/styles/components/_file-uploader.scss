@@ -1,0 +1,14 @@
+.file-uploader {
+  svg {
+    transform: scale(1);
+    transition: 500ms ease-in-out all;
+    color: currentColor;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.2);
+      color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,91 @@
+// ... existing code ...
+
+/**
+ * Colors transition classes
+ * 
+ * Generates classes for color transitions with durations from 100ms to 1000ms.
+ * 
+ * Usage: 
+ * <div class="trans-colors-300">Color transition</div>
+ * 
+ * This will apply a 300ms transition to color properties.
+ */
+@for $i from 1 through 10 {
+  $duration: $i * 100;
+  .trans-colors-#{$duration} {
+    @apply transition-colors;
+    transition-duration: #{$duration}ms;
+  }
+}
+
+/**
+   * All properties transition classes
+   * 
+   * Generates classes for transitions on all properties with durations from 100ms to 1000ms.
+   * 
+   * Usage: 
+   * <div class="trans-all-500">All properties transition</div>
+   * 
+   * This will apply a 500ms transition to all properties.
+   */
+@for $i from 1 through 15 {
+  $duration: $i * 100;
+  .trans-all-#{$duration} {
+    @apply transition-all;
+    transition-duration: #{$duration}ms;
+  }
+}
+
+/**
+   * Transform transition classes
+   * 
+   * Generates classes for transform transitions with durations from 100ms to 1000ms.
+   * 
+   * Usage: 
+   * <div class="trans-transform-200">Transform transition</div>
+   * 
+   * This will apply a 200ms transition to transform properties.
+   */
+@for $i from 1 through 10 {
+  $duration: $i * 100;
+  .trans-transform-#{$duration} {
+    @apply transition-transform;
+    transition-duration: #{$duration}ms;
+  }
+}
+
+/**
+   * Opacity transition classes
+   * 
+   * Generates classes for opacity transitions with durations from 100ms to 1000ms.
+   * 
+   * Usage: 
+   * <div class="trans-opacity-400">Opacity transition</div>
+   * 
+   * This will apply a 400ms transition to the opacity property.
+   */
+@for $i from 1 through 10 {
+  $duration: $i * 100;
+  .trans-opacity-#{$duration} {
+    @apply transition-opacity;
+    transition-duration: #{$duration}ms;
+  }
+}
+
+/**
+   * Size transition classes
+   * 
+   * Generates classes for width and height transitions with durations from 100ms to 1000ms.
+   * 
+   * Usage: 
+   * <div class="trans-size-600">Size transition</div>
+   * 
+   * This will apply a 600ms transition to width and height properties.
+   */
+@for $i from 1 through 10 {
+  $duration: $i * 100;
+  .trans-size-#{$duration} {
+    transition-property: width, height;
+    transition-duration: #{$duration}ms;
+  }
+}

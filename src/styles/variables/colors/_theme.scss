@@ -1,0 +1,35 @@
+$theme-colors: (
+  "primary": #ff6c00,
+  "brand": #ff6c00,
+  "primary--alt": #ff6c00,
+  "primary--darker": rgb(255, 91, 0),
+  "color-one": rgba(255, 106, 0, 0.8),
+  "color-two": #fe8bbb,
+  "color-three": #9e7aff,
+  "error": #ff4949,
+  "success": #2cffd1,
+
+  // dark theme colors
+  "dark-bg": #040404,
+  "dark-bg--lighter": #161616,
+  // footer
+  "dark-section": #0c0c0c,
+  // cards, alt-sections
+  "dark-section--lighter": #131313,
+
+  // bg-card-alt, bg-section-alt
+  // bg for card for example
+  "body-gradient": linear-gradient(256.59deg, #000 23.98%, #171616 100.35%),
+  // Border color
+  "seperator": #131313,
+  "border": #252525,
+  // text-colors
+  "muted": #909090,
+  "white": #f3f3f3,
+);
+
+@mixin apply-theme-colors {
+  @each $key, $value in $theme-colors {
+    --#{$key}: #{$value};
+  }
+}

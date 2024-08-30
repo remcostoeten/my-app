@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "../styles/app.scss";
+import Header from "@/components/layout/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+     <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-black -z-10" />
+        <Header />
+        <main className="pt-16">{children}</main>
+      </body>
     </html>
   );
 }

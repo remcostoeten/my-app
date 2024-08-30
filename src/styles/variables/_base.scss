@@ -1,0 +1,32 @@
+@use "colors/light" as light;
+@use "colors/dark" as dark;
+@use "colors/theme" as theme;
+@use "sizes" as sizes;
+
+@layer base {
+  :root {
+    @include light.apply-light-theme;
+    @include theme.apply-theme-colors;
+    @include sizes.apply-sizes;
+  }
+
+  .dark {
+    @include dark.apply-dark-theme;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+[data-theme="dark"] {
+  --fill-color: var(--primary);
+}
+
+[data-theme="light"] {
+  --fill-color: var(--primary);
+}

@@ -1,0 +1,10 @@
+$sizes: (
+  "marketing-header-height": 56px,
+  "navigation-height": 3.5rem,
+);
+
+@mixin apply-sizes {
+  @each $key, $value in $sizes {
+    --#{$key}: #{$value};
+  }
+}
