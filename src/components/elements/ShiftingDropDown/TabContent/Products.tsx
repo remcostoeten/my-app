@@ -1,7 +1,8 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 
-export const Products = () => {
+
+export default function Products() {
   return (
     <div>
       <div className="flex gap-4">

@@ -55,7 +55,7 @@
         "./src/core/server/db"
       ],
       "schema": [
-        "./src/core/server/schema"
+        "src/core/server/schema"
       ]
     },
     "plugins": [
