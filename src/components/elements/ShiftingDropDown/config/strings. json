@@ -1,0 +1,53 @@
+{
+  "common": {
+    "viewMore": "View more"
+  },
+  "blog": {
+    "title": "Lorem ipsum dolor",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos.",
+    "posts": [
+      {
+        "image": "/imgs/blog/4.png",
+        "title": "Lorem ipsum dolor",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos."
+      },
+      {
+        "image": "/imgs/blog/5.png",
+        "title": "Lorem ipsum dolor",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet illo quidem eos."
+      }
+    ]
+  },
+  "pricing": {
+    "options": [
+      {
+        "label": "Startup",
+        "icon": "FiHome"
+      },
+      {
+        "label": "Scaleup",
+        "icon": "FiBarChart2"
+      },
+      {
+        "label": "Enterprise",
+        "icon": "FiPieChart"
+      }
+    ]
+  },
+  "products": {
+    "categories": [
+      {
+        "title": "Startup",
+        "services": ["Bookkeeping", "Invoicing"]
+      },
+      {
+        "title": "Scaleup",
+        "services": ["Live Coaching", "Reviews", "Tax/VAT"]
+      },
+      {
+        "title": "Enterprise",
+        "services": ["White glove", "SOX Compliance", "Staffing", "More"]
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
  import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/app.scss";
-import Header from "@/components/layout/Header";
+import { ShiftingDropDown } from "@/components/elements/ShiftingDropDown";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
      <div className="fixed inset-0 bg-gradient-to-br from-gray-900 to-black -z-10" />
-        <Header />
+        <ShiftingDropDown />
         <main className="pt-16">{children}</main>
       </body>
     </html>

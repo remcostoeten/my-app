@@ -1,5 +1,5 @@
 export * from './button'
 export * from './input'
 export * from './label'
-export * from './icons'
+export * from './sheet'
  

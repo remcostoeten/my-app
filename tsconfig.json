@@ -6,8 +6,6 @@
       "esnext"
     ],
     "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "removeComments": false,
     "preserveConstEnums": true,
     "strict": false,
@@ -24,7 +22,9 @@
     "target": "es2017",
     "outDir": "out",
     "sourceMap": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "checkJs": false,

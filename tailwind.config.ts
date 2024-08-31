@@ -1,5 +1,5 @@
 
-const config = {
+ const config = {
   darkMode: ['class'],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -24,7 +24,7 @@ const config = {
       colors: {
         // Darks (bg, cards etc)
         'dark-bg': 'var(--dark-bg)', // used in footer 
-        'dark-section': 'var(--dark-section)', // used as sections (cards for example)
+        'dark-section': 'var(--dark-section)', // used as sections (cards for example)                        
         'dark-section--lighter': 'var(--dark-section--lighter)', // used as sections (cards for example)
         'body-gradient': 'var(--body-gradient)', // used in footer
 

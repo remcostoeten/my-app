@@ -1,46 +1,46 @@
 {
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended"
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:@next/next/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier", "import"],
+  "rules": {
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    "react/react-in-jsx-scope": "off",
+    "quotes": ["error", "single"],
+    "eol-last": ["error", "always"],
+    "newline-after-var": ["error", "always"],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "directive", "next": "*" }
     ],
-    "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
-    "rules": {
-        "prettier/prettier": [
-            "error",
-            {
-                "@typescript-eslint/no-explicit-any": "false",
-                "singleQuote": true, // Enforce single quotes
-                "endOfLine": "lf", // Enforce LF line endings
-                "insertPragma": false,
-                "requirePragma": false,
-                "trailingComma": "none",
-                "arrowParens": "avoid",
-                "printWidth": 80,
-                "tabWidth": 4,
-                "semi": false
-            }
-        ],
-        "react/react-in-jsx-scope": "off",
-        "quotes": ["error", "single"], // Enforce single quotes
-        "eol-last": ["error", "always"], // Enforce newline at the end of the file
-        "newline-after-var": ["error", "always"], // Enforce newline after variable declarations
-        "padding-line-between-statements": [
-            "error",
-            { "blankLine": "always", "prev": "directive", "next": "*" } // Enforce newline after directives like 'use client'
-        ]
+    "import/no-unresolved": "error",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 2023, // Updated to 2023 to reflect ES version 13
-        "sourceType": "module"
+    "ecmaVersion": 2023,
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
     },
-    "settings": {
-        "react": {
-            "version": "detect" // Automatically detect the React version
-        }
+    "import/resolver": {
+      "typescript": {},
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
     }
+  }
 }

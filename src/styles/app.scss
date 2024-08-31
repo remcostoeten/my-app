@@ -1,8 +1,27 @@
- @use "variables" as vars;
+@use "variables" as vars;
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* v0  */
+:root { 
+  --header-height: 64px;
+  --header-blur: 24px;
+  --header-bg: hsla(0, 0%, 4%, .2);
+  --header-border: hsla(0, 0%, 100%, .08);
+  --header-top: 16px;
+  --header-radius: 16px;
+  --header-max-width: calc(var(--page-max-width) + 24px);
+  --page-padding-default: 32px;
+  --page-max-width: 1024px;
+  --page-padding-left: max(env(safe-area-inset-left), var(--page-padding-default));
+  --page-padding-right: max(env(safe-area-inset-right), var(--page-padding-default));
+  --color-bg-primary: #08090B;
+  --color-text-primary: #e6e6e6;
+  --color-text-secondary: #d0d6e0;
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+} 
 
 /* Components */
 @import "./components/_auth-sign-up";
@@ -248,7 +267,7 @@ h1[data-localization-key="userProfile.navbar.title"] {
 
 [data-theme="light"] {
   --fill-color: var(--primary);
-}
+}               
 
 @layer base {
   body {
