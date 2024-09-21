@@ -1,7 +1,8 @@
+import SEOBlogButton from '@/components/ui/SeoBtn'
 import React from 'react'
 
-export default function page() {
+export default function Page() {
   return (
-    <div>page</div>
+    <div><SEOBlogButton/></div>
   )
 }

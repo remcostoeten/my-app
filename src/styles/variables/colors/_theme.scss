@@ -10,7 +10,7 @@ $theme-colors: (
   "success": #2cffd1,
 
   // dark theme colors
-  "dark-bg": #040404,
+  "dark-bg": #121212,
   "dark-bg--lighter": #161616,
   // footer
   "dark-section": #0c0c0c,
@@ -26,6 +26,7 @@ $theme-colors: (
   // text-colors
   "muted": #909090,
   "white": #f3f3f3,
+   "white-alt":rgba(255, 255, 255, 0.5),
 );
 
 @mixin apply-theme-colors {

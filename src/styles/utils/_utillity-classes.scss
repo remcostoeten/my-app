@@ -1,5 +1,16 @@
+// Width utilities
 .w-fit-content {
   width: fit-content;
+}
+
+.w-screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.min-w-screen {
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 .min-w-fit-content {
@@ -10,6 +21,7 @@
   max-width: fit-content;
 }
 
+// Visual effects
 .glow {
   filter: drop-shadow(0 0 5px yellow);
 }
@@ -18,135 +30,52 @@
   background-image: var(--body-gradient);
 }
 
+// Transition utilities
 .trans-all {
   transition-property: all;
 
-  &--100 {
-    transition-duration: 100ms;
-  }
-  &--200 {
-    transition-duration: 200ms;
-  }
-  &--300 {
-    transition-duration: 300ms;
-  }
-  &--400 {
-    transition-duration: 400ms;
-  }
-  &--500 {
-    transition-duration: 500ms;
-  }
-  &--600 {
-    transition-duration: 600ms;
-  }
-  &--700 {
-    transition-duration: 700ms;
-  }
-  &--800 {
-    transition-duration: 800ms;
-  }
-  &--900 {
-    transition-duration: 900ms;
-  }
-  &--1000 {
-    transition-duration: 1000ms;
+  @for $i from 1 through 10 {
+    $duration: $i * 100;
+    &--#{$duration} {
+      transition-duration: #{$duration}ms;
+    }
   }
 }
+
+// Easing functions
+$ease-types: (
+  in: (quad, cubic, quart, quint, expo, circ),
+  out: (quad, cubic, quart, quint, expo, circ),
+  in-out: (quad, cubic, quart, quint, expo, circ)
+);
 
 .ease {
-  &-in-quad {
-    transition-timing-function: var(--ease-in-quad);
-  }
-  &-in-cubic {
-    transition-timing-function: var(--ease-in-cubic);
-  }
-  &-in-quart {
-    transition-timing-function: var(--ease-in-quart);
-  }
-  &-in-quint {
-    transition-timing-function: var(--ease-in-quint);
-  }
-  &-in-expo {
-    transition-timing-function: var(--ease-in-expo);
-  }
-  &-in-circ {
-    transition-timing-function: var(--ease-in-circ);
-  }
-
-  &-out-quad {
-    transition-timing-function: var(--ease-out-quad);
-  }
-  &-out-cubic {
-    transition-timing-function: var(--ease-out-cubic);
-  }
-  &-out-quart {
-    transition-timing-function: var(--ease-out-quart);
-  }
-  &-out-quint {
-    transition-timing-function: var(--ease-out-quint);
-  }
-  &-out-expo {
-    transition-timing-function: var(--ease-out-expo);
-  }
-  &-out-circ {
-    transition-timing-function: var(--ease-out-circ);
-  }
-
-  &-in-out-quad {
-    transition-timing-function: var(--ease-in-out-quad);
-  }
-  &-in-out-cubic {
-    transition-timing-function: var(--ease-in-out-cubic);
-  }
-  &-in-out-quart {
-    transition-timing-function: var(--ease-in-out-quart);
-  }
-  &-in-out-quint {
-    transition-timing-function: var(--ease-in-out-quint);
-  }
-  &-in-out-expo {
-    transition-timing-function: var(--ease-in-out-expo);
-  }
-  &-in-out-circ {
-    transition-timing-function: var(--ease-in-out-circ);
-  }
-}
-
-.trans-all {
-  transition-property: all;
-
-  @each $duration in (100, 200, 300, 400, 500, 600, 700, 800, 900, 1000) {
-    @each $easing
-      in (
-        in-quad,
-        in-cubic,
-        in-quart,
-        in-quint,
-        in-expo,
-        in-circ,
-        out-quad,
-        out-cubic,
-        out-quart,
-        out-quint,
-        out-expo,
-        out-circ,
-        in-out-quad,
-        in-out-cubic,
-        in-out-quart,
-        in-out-quint,
-        in-out-expo,
-        in-out-circ
-      )
-    {
-      &-#{$duration}-#{$easing} {
-        transition-duration: #{$duration}ms;
-        transition-timing-function: var(--ease-#{$easing});
+  @each $prefix, $types in $ease-types {
+    @each $type in $types {
+      &-#{$prefix}-#{$type} {
+        transition-timing-function: var(--ease-#{$prefix}-#{$type});
       }
     }
   }
 }
-/* 
-trans-all-100-in-quad
-trans-all-200-out-cubic
-trans-all-300-in-out-expo
-*/
+
+// Combined transition and easing
+.trans-all {
+  transition-property: all;
+
+  @each $duration in (100, 200, 300, 400, 500, 600, 700, 800, 900, 1000) {
+    @each $prefix, $types in $ease-types {
+      @each $type in $types {
+        &-#{$duration}-#{$prefix}-#{$type} {
+          transition-duration: #{$duration}ms;
+          transition-timing-function: var(--ease-#{$prefix}-#{$type});
+        }
+      }
+    }
+  }
+}
+
+// Usage examples:
+// trans-all-100-in-quad
+// trans-all-200-out-cubic
+// trans-all-300-in-out-expo
