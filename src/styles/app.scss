@@ -274,3 +274,9 @@ h1[data-localization-key="userProfile.navbar.title"] {
     @apply bg-background text-foreground;
   }
 }
+.gradient-icon {
+  --tw-gradient-from: hsla(0, 0%, 100%, .05);
+  --tw-gradient-to: hsla(0, 0%, 100%, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #ffffff0d, #ffffff1a;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}

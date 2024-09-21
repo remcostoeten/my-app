@@ -1,12 +1,12 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 
-export const Products = () => {
+export default function Products() {
   return (
     <div>
       <div className="flex gap-4">
         <div>
-          <h3 className="mb-2 text-sm font-medium">Startup</h3>
+          <h3 className="mb-2 text-sm text-white  font-medium">Startup</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
             Bookkeeping
           </a>
@@ -15,7 +15,7 @@ export const Products = () => {
           </a>
         </div>
         <div>
-          <h3 className="mb-2 text-sm font-medium">Scaleup</h3>
+          <h3 className="mb-2 text-sm text-white  font-medium">Scaleup</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
             Live Coaching
           </a>
@@ -27,7 +27,7 @@ export const Products = () => {
           </a>
         </div>
         <div>
-          <h3 className="mb-2 text-sm font-medium">Enterprise</h3>
+          <h3 className="mb-2 text-sm text-white  font-medium">Enterprise</h3>
           <a href="#" className="mb-1 block text-sm text-neutral-400">
             White glove
           </a>

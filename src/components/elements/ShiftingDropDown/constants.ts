@@ -1,6 +1,6 @@
-import { Products } from "./TabContent/Products";
-import { Pricing } from "./TabContent/Pricing";
-import { Blog } from "./TabContent/Blog";
+import Products from "./TabContent/Products";
+import Authentication from "./TabContent/Authentication";
+import Blog from "./TabContent/Blog";
 
 export const TABS = [
   {
@@ -8,8 +8,8 @@ export const TABS = [
     Component: Products,
   },
   {
-    title: "Pricing",
-    Component: Pricing,
+    title: "Authentication",
+    Component: Authentication,
   },
   {
     title: "Blog",

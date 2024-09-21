@@ -1,7 +1,7 @@
 import React from "react";
 import { FiArrowRight } from "react-icons/fi";
 
-export const Blog = () => {
+export default function Blog() { 
   return (
     <div>
       <div className="grid grid-cols-2 gap-2">
